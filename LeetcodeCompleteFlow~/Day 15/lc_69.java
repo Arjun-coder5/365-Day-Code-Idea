@@ -1,0 +1,17 @@
+public class lc_69 {
+    public static int mySqrt(int x) {
+        long l = 0, r = x, ans = 0;
+        while (l <= r) {
+            long mid = (l + r) / 2;
+            if (mid * mid <= x) {
+                ans = mid;
+                l = mid + 1;
+            } else r = mid - 1;
+        }
+        return (int) ans;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(mySqrt(8));
+    }
+}
